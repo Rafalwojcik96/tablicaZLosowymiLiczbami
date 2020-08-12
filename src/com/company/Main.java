@@ -22,8 +22,9 @@ public class Main {
         for (int i = 0; i < size; i++) {
             numbers.add(generator.nextInt(10));
         }
-        System.out.println("Wygenerowane liczby to: " + numbers);
-        System.out.println(" ");
+        System.out.println("Wygenerowane liczby to: " + numbers + "\n");
+
+
 
         for (int i = 0; i < size; i++) {
             int rest = numbers.get(i) % 2;
@@ -33,9 +34,19 @@ public class Main {
                 oddNumbers.add(numbers.get(i));
             }
         }
-        System.out.println("Liczby nieparzyste z listy to: " + oddNumbers);
-        System.out.println("Liczby parzyste z listy to: " + evenNumbers);
-        System.out.println(" ");
+
+        if (!oddNumbers.isEmpty()) {
+            System.out.println("Liczby nieparzyste z listy to: " + oddNumbers);
+        }
+        else {
+            System.out.println("Brak liczb nieparzystych");
+        }
+        if (!evenNumbers.isEmpty()) {
+            System.out.println("Liczby parzyste z listy to: " + evenNumbers + "\n");
+        }
+        else{
+            System.out.println("Brak liczb parzystych.\n" );
+        }
         System.out.print("Suma liczb nieparzystych to: ");
 
         for (int i = 0; i < oddNumbers.size(); i++) {
